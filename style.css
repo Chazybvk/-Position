@@ -37,9 +37,27 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /*Обнуление*/
+
 html {
 	background-color: black;
 }
+
+body {
+	position: relative;
+}
+
+.logo {
+	max-width: 100px;
+	position: fixed;
+	top: -25px;
+	left: 3vw;
+}
+.logo:hover {
+	max-width: 110px;
+	box-shadow: 0px 5px 25px rgba(0, 0, 0, 1);
+	transition-duration: 0.3s;
+}
+
 * {
 	font-family: 'Manrope', sans-serif;
 	color: white;
@@ -100,12 +118,21 @@ img {
 	box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.9);
 
 }
+@media screen and (max-width: 1000px) {
+.logo {
+	max-width: 50px;
+	position: fixed;
+	top: -15px;
+	left: 1vw;
+}
+}
 
 @media screen and (max-width: 550px) {
 img {
 	max-width: 320px;
 	border-radius: 10px;
 }
+.logo {
+	display: none;
 }
-
-
+}
